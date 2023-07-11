@@ -1,0 +1,37 @@
+body {
+    background-color: aliceblue;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto 0;
+}
+
+.types-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 330px;
+}
+
+.type-card {
+    text-align: center;
+    border: 1px solid silver;
+    border-radius: 30px;
+    padding: 5px 50px;
+    margin: 5px 5px;
+}
+
+.type-card a {
+    text-decoration: none;
+    color: black;
+}
+
+.type-card:hover {
+    background-color: #87C1FF;
+    cursor: pointer;
+    transition: background-color 300ms;
+}

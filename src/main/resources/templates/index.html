@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/style.css}" rel="stylesheet" />
+    <title>Landing page</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Pokémon Types</h1>
+        <div class="types-container">
+            <div class="type-card" th:each="type: ${types}">
+                <a th:text="${type}" th:href="@{/types/{tp}(tp=${type})}"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
