@@ -27,7 +27,15 @@ public class PokemonService {
         return typeList;
     }
 
-    public void getPokemonByType(String tp) {
-        System.out.println(pRepo.getPokemonByType(tp).toString());
+    public List<Pokemon> getPokemonByType(String tp) {
+        List<Pokemon> pokeList = new ArrayList<Pokemon>();
+        for (Document dPoke: pRepo.getPokemonByType(tp)) {
+            pokeList.add(new Pokemon(
+                        dPoke.getString("id"),
+                        dPoke.getString("name"),
+                        dPoke.getString("img"),
+                        dPoke.getList("type", String.class)));
+        }
+        return pokeList;
     }
 }

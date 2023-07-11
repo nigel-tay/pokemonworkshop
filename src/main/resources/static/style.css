@@ -2,12 +2,7 @@ body {
     background-color: aliceblue;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 100px auto 0;
-}
+/* Index */
 
 .types-container {
     display: flex;
@@ -17,15 +12,16 @@ body {
     width: 330px;
 }
 
+.type-card-container {
+    margin-top: 30px;
+}
+
 .type-card {
     text-align: center;
     border: 1px solid silver;
     border-radius: 30px;
     padding: 5px 50px;
-    margin: 5px 5px;
-}
-
-.type-card a {
+    margin: 0 5px;
     text-decoration: none;
     color: black;
 }
@@ -34,4 +30,48 @@ body {
     background-color: #87C1FF;
     cursor: pointer;
     transition: background-color 300ms;
+}
+
+/* pokemonbytype */
+.card-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1000px;
+}
+
+.pokemon-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 150px;
+    padding: 40px;
+    border: 2px solid gray;
+    border-radius: 10px 10px;
+    margin-top: 20px;
+}
+
+.pokemon-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.poke-type-container {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+
+/* Shared */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 0;
 }

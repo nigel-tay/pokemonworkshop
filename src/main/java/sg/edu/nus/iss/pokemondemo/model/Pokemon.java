@@ -13,5 +13,5 @@ public class Pokemon {
     private String id;
     private String name;
     private String img;
-    private List<String> type;
+    private List<String> types;
 }

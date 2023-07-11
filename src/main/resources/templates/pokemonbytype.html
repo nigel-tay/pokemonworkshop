@@ -3,13 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/style.css}" rel="stylesheet" />
     <title>Pokemon List</title>
 </head>
 <body>
-    <div>
+    <div class="container">
         <h1>
             <span th:text="${type}"></span> <span>type Pokémon</span>
         </h1>
+        <div class="card-container">
+            <div th:each="pokemon: ${pokelist}" class="pokemon-card">
+                <img th:src="@{{img}(img=${pokemon.img})}" alt="Pokemon Image">
+                <div class="pokemon-text">
+                    <div class="poke-type-container">
+                        <span class="pokemon-id">ID: <span th:text="${pokemon.id}"></span></span>
+                        <span class="pokemon-name"><span th:text="${pokemon.name}"></span></span>
+                    </div>
+                    <div class="poke-type-container">
+                        <span>Type: </span>
+                        <span th:each="type: ${pokemon.types}">
+                            <span th:text="*{type}"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

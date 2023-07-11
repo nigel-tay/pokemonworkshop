@@ -10,8 +10,8 @@
     <div class="container">
         <h1>Pokémon Types</h1>
         <div class="types-container">
-            <div class="type-card" th:each="type: ${types}">
-                <a th:text="${type}" th:href="@{/types/{tp}(tp=${type})}"></a>
+            <div th:each="type: ${types}" class="type-card-container">
+                <a class="type-card" th:text="${type}" th:href="@{/types/{tp}(tp=${type})}"></a>
             </div>
         </div>
     </div>
