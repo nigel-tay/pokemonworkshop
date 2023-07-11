@@ -1,5 +1,7 @@
 package sg.edu.nus.iss.pokemondemo.model;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,5 +13,5 @@ public class Pokemon {
     private String id;
     private String name;
     private String img;
-    private String[] type;
+    private List<String> type;
 }
